@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - NobleRoot Crypto Courses</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Liên kết tới Font Awesome -->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url(../image/Website\ \(1\).png) center/cover no-repeat;
+
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        .login-container {
+            background-color: rgba(46, 0, 79, 10);
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            width: 400px;
+            text-align: center;
+            border: 2px solid #ff944d;
+            position: relative; /* Đảm bảo mũi tên hiển thị đúng vị trí */
+        }
+
+        .login-header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Căn giữa tiêu đề */
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.back-arrow {
+    color: #ff944d;
+    font-size: 1.5em;
+    text-decoration: none;
+    position: absolute;
+    left: 10px; /* Căn lề trái cho mũi tên */
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.back-arrow i {
+    margin-right: 8px;
+}
+
+.back-arrow:hover {
+    color: #ff6600;
+}
+
+.login-header h2 {
+    margin: 0;
+    color: #ff944d;
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center; /* Căn giữa chữ "Đăng Nhập" */
+}
+
+.login-header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ff944d;
+    margin-top: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+}
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: #3d0066;
+            color: #ffffff;
+            font-size: 1em;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .login-container input:focus {
+            background-color: #4e007f;
+            box-shadow: 0px 0px 8px #ff944d;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff944d;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1a0033;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background-color: #ff6600;
+            box-shadow: 0px 0px 15px #ff944d;
+        }
+
+        .login-container .forgot-password {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #c3a0f1;
+        }
+
+        .login-container .forgot-password a {
+            color: #ff944d;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .login-container .forgot-password a:hover {
+            color: #ff6600;
+        }
+
+        .login-container input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <a href="index.html" class="back-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h2>Đăng Nhập</h2>
+        </div>
+        <form action="login_process.html" method="POST">
+            <input type="text" placeholder="Tên đăng nhập" required>
+            <input type="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng Nhập</button>
+            <div class="forgot-password">
+                <a href="#">Quên mật khẩu?</a>
+            </div>
+        </form>
+    </div>
+    
+</body>
+
+</html>

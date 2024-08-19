@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Analysis Course - NobleRoot</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a0033;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #ffffff;
+        }
+
+        .course-detail-container {
+            background-color: #2e004f;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            text-align: center;
+            position: relative;
+        }
+
+        .course-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .back-arrow {
+            color: #ff944d;
+            font-size: 1.5em;
+            text-decoration: none;
+            position: absolute;
+            left: 0;
+            display: flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+
+        .back-arrow i {
+            margin-right: 8px;
+        }
+
+        .back-arrow:hover {
+            color: #ff6600;
+        }
+
+        .course-header h2 {
+            color: #ff944d;
+            font-size: 2em;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .course-header::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: #ff944d;
+            margin-top: 10px;
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+        }
+
+        .course-detail-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #ff944d;
+            margin-top: 20px;
+        }
+
+        .course-detail-container button {
+            padding: 12px 20px;
+            background-color: #ff944d;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            color: #1a0033;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .course-detail-container button:hover {
+            background-color: #ff6600;
+            box-shadow: 0px 0px 15px #ff944d;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="course-detail-container">
+        <div class="course-header">
+            <a href="index.html" class="back-arrow">
+                <i class="fas fa-arrow-left"></i>
+            </a>
+            <h2>Phân Tích Kỹ Thuật</h2>
+        </div>
+        <img src="image/NEWS (4).png" alt="Phân Tích Kỹ Thuật">
+        <button onclick="window.location.href='checkout.html?course=technical_analysis'">Enroll Now</button>
+    </div>  
+</body>
+
+</html>

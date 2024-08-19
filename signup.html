@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - NobleRoot</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+    <section id="signup-section">
+        <div class="signup-container">
+            <div class="signup-header">
+                <a href="index.html" class="back-arrow">
+                    <i class="fas fa-arrow-left"></i> <!-- Mũi tên trở về -->
+                </a>
+                <h2>Sign Up</h2>
+            </div>
+            <form action="/submit-signup" method="post" onsubmit="return validatePassword()">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+    
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+
+            // Kiểm tra độ mạnh của mật khẩu
+            const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert('Password phải có ít nhất 8 ký tự, bao gồm ít nhất một chữ cái in hoa và một số.');
+                return false;
+            }
+
+            // Kiểm tra mật khẩu xác nhận
+            if (password !== confirmPassword) {
+                alert('Password và Confirm Password không khớp.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
