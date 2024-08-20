@@ -394,3 +394,81 @@ html {
     font-size: 1.2em;
   }
   
+
+
+
+
+
+  
+/* Style cho dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown content style */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: rgba(58, 0, 102, 0.9); /* Màu nền tối hơn và ít trong suốt */
+    min-width: 220px;
+    border-radius: 12px; /* Bo tròn góc */
+    overflow: hidden;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.4); /* Bóng đổ mềm mại hơn */
+    z-index: 1;
+    top: 100%; /* Đảm bảo dropdown xuất hiện ngay bên dưới nút */
+    left: 0;
+    transform: translateY(10px); /* Ban đầu dịch chuyển nhẹ xuống dưới */
+    opacity: 0; /* Ban đầu ẩn */
+    transition: all 0.3s ease; /* Thêm chuyển đổi mượt mà */
+}
+
+/* Style cho các link bên trong dropdown */
+.dropdown-content a {
+    color: #ff944d; /* Màu chữ cam để nổi bật */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, padding-left 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect cho các link */
+.dropdown-content a:hover {
+    background-color: #4e007f; /* Màu nền khi hover đậm hơn */
+    color: #ffffff; /* Màu chữ khi hover */
+    padding-left: 20px; /* Dịch chuyển nhẹ sang phải khi hover */
+}
+
+/* Hiển thị dropdown content khi hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0); /* Đưa box về vị trí ban đầu */
+    opacity: 1; /* Hiển thị box */
+}
+
+
+.dropdown-toggle {
+    color: #ff944d; /* Màu chữ của link */
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    position: relative;
+    display: inline-flex;
+    align-items: center; /* Căn giữa dọc mũi tên với chữ */
+    gap: 5px; /* Khoảng cách giữa chữ và mũi tên */
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle i {
+    font-size: 0.8em; /* Kích thước nhỏ hơn cho mũi tên */
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover .dropdown-toggle i {
+    transform: rotate(180deg); /* Xoay mũi tên khi hover */
+}
+
+.dropdown:hover .dropdown-toggle {
+    color: #c3a0f1; /* Màu khi hover */
+}

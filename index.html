@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NobleRoot Crypto Courses</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Đảm bảo liên kết đúng -->
+    <link rel="stylesheet" href="../css/style.css"> <!-- Đảm bảo liên kết đúng -->
 
     <style>
          html {
@@ -94,7 +94,7 @@
             width: 100%;
             max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
             height: 100vh;
-            background: url('image/Website\ \(2\).png') center/cover no-repeat, linear-gradient(to right, #3d0066, #1a0033);
+            background: url('../image/Website\ \(2\).png') center/cover no-repeat, linear-gradient(to right, #3d0066, #1a0033);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -282,15 +282,24 @@
     <header>
         <div class="logo-container">
             <a href="index.html">
-                <img src="image/Website.svg" alt="NobleRoot Logo">
+                <img src="../image/Website.svg" alt="NobleRoot Logo">
             </a>
         </div>
         <div class="header-nav">
             <div class="header-links">
                 <a href="index.html">Trang chủ</a>
                 <a href="#membership">Membership</a>
-                <a href="login.html">Đăng Nhập</a>
-                <a href="signup.html">Đăng Ký</a>
+                <a href="login.html">Đăng nhập</a>
+                <a href="signup.html">Đăng ký</a>
+                <div class="dropdown">
+                    <a href="#" class="dropdown-toggle">Hướng dẫn <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Đăng kí membership</a>
+                        <a href="guide.html" target="_blank">Đăng kí tài khoản Binance</a>
+                        <a href="#">Nạp tiền</a>
+                        <a href="#">Lộ trình cho người mới</a>
+                    </div>
+                </div>
             </div>
             <a href="#" id="connectWallet" class="connect-wallet">Connect Wallet</a>
         </div>
@@ -308,19 +317,19 @@
             <img src="image/14.svg" alt="Technical Analysis">
             <h2>Phân tích kĩ thuật</h2>
             <p>Learn how to analyze charts and market trends to make informed trading decisions.</p>
-            <button onclick="window.location.href='ta.html'">Enroll Now</button>     
+            <button onclick="window.location.href='ta.html'">Chi tiết</button>     
         </div>
         <div class="course-card" id="crypto-project-analysis">
             <img src="image/15.svg" alt="Crypto Project Analysis">
             <h2>Phân tích dự án</h2>
             <p>Understand the fundamentals of crypto projects and how to evaluate their potential.</p>
-            <button>Enroll Now</button>
+            <button>Chi tiết</button>
         </div>
         <div class="course-card" id="on-chain-analysis">
             <img src="image/16.svg" alt="On-Chain Analysis">
             <h2>On-Chain</h2>
             <p>Dive into on-chain metrics to gain insights into blockchain activity and trends.</p>
-            <button>Enroll Now</button>
+            <button>Chi tiết</button>
         </div>
     </div>
 
@@ -367,11 +376,11 @@
 
             <div class="wallet-options">
                 <div class="wallet-option" id="phantomWallet">
-                    <img src="image/White Ghost_docs_nu.svg" alt="Phantom">
+                    <img src="../image/White Ghost_docs_nu.svg" alt="Phantom">
                     <p>Phantom Wallet</p>
                 </div>
                 <div class="wallet-option" id="metamaskWallet">
-                    <img src="image/images.png" alt="Metamask">
+                    <img src="../image/images.png" alt="Metamask">
                     <p>Metamask</p>
                 </div>
                 <!-- Add more wallet options as needed -->
@@ -397,7 +406,7 @@
 <script src="https://cdn.jsdelivr.net/npm/web3modal"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.4/ethers.umd.min.js"></script>
 <!-- Nhúng connectwallet.js -->
-<script src="js/connectwallet.js"></script>
+<script src="../js/connectwallet.js"></script>
 
 </body>
 
