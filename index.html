@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NobleRoot Crypto Courses</title>
-    <link rel="stylesheet" href="../css/style.css"> <!-- Đảm bảo liên kết đúng -->
+    <link rel="stylesheet" href="css/style.css"> <!-- Đảm bảo liên kết đúng -->
 
     <style>
          html {
@@ -94,7 +94,7 @@
             width: 100%;
             max-width: 100%; /* Đảm bảo không vượt quá chiều rộng màn hình */
             height: 100vh;
-            background: url('../image/Website\ \(2\).png') center/cover no-repeat, linear-gradient(to right, #3d0066, #1a0033);
+            background: url('image/Website\ \(2\).png') center/cover no-repeat, linear-gradient(to right, #3d0066, #1a0033);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -276,6 +276,7 @@
     margin: 10px auto 0; /* Tạo khoảng cách giữa đường kẻ và phần text */
 }
     </style>
+    
 </head>
 
 <body>
@@ -295,7 +296,7 @@
                     <a href="#" class="dropdown-toggle">Hướng dẫn <i class="fas fa-caret-down"></i></a>
                     <div class="dropdown-content">
                         <a href="#">Đăng kí membership</a>
-                        <a href="guide.html" target="_blank">Đăng kí tài khoản Binance</a>
+                        <a href="#" id="openGuide">Đăng kí tài khoản Binance</a>
                         <a href="#">Nạp tiền</a>
                         <a href="#">Lộ trình cho người mới</a>
                     </div>
@@ -387,6 +388,30 @@
             </div>
         </div>
     </div>
+
+    <div id="guideModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Đăng kí tài khoản Binance</h2>
+            <div class="guide-step">
+                <h3>Bước 1: Truy cập vào app Binance</h3>
+                <img src="image/21.png" alt="Bước 1: Truy cập vào app Binance">
+            </div>
+            <div class="guide-step">
+                <h3>Bước 1: Truy cập vào trang chủ</h3>
+                <img src="image/22.png" alt="Bước 2: Truy cập vào trang chủ">
+            </div>
+            <div class="guide-step">
+                <h3>Bước 1: Truy cập vào trang chủ</h3>
+                <img src="image/23.png" alt="Bước 3: Truy cập vào trang chủ">
+            </div>
+            <div class="guide-step">
+                <h3>Bước 1: Truy cập vào trang chủ</h3>
+                <img src="image/24.png" alt="Bước 4: Truy cập vào trang chủ">
+            </div>
+            <!-- Thêm các bước khác tương tự -->
+        </div>
+    </div>
     
 
     <footer>
@@ -407,7 +432,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.5.4/ethers.umd.min.js"></script>
 <!-- Nhúng connectwallet.js -->
 <script src="../js/connectwallet.js"></script>
+<script>
 
+ // Mở modal
+document.getElementById('openGuide').onclick = function() {
+    document.getElementById('guideModal').style.display = 'block';
+    document.body.classList.add('modal-open'); // Ẩn thanh cuộn của trang chính
+};
+
+// Đóng modal
+document.querySelector('#guideModal .close').onclick = function() {
+    document.getElementById('guideModal').style.display = 'none';
+    document.body.classList.remove('modal-open'); // Hiển thị lại thanh cuộn của trang chính
+};
+
+// Đóng modal khi click ra ngoài vùng modal
+window.onclick = function(event) {
+    if (event.target == document.getElementById('guideModal')) {
+        document.getElementById('guideModal').style.display = 'none';
+        document.body.classList.remove('modal-open'); // Hiển thị lại thanh cuộn của trang chính
+    }
+};
+
+</script>
 </body>
 
 </html>

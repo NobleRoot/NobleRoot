@@ -472,3 +472,75 @@ html {
 .dropdown:hover .dropdown-toggle {
     color: #c3a0f1; /* Màu khi hover */
 }
+
+
+
+
+
+
+/* Modal cho Hướng Dẫn Đăng Kí */
+#guideModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 30px;
+    overflow: hidden; /* Ẩn thanh cuộn ở ngoài modal */
+}
+
+#guideModal .modal-content {
+    max-width: 600px;
+    margin: 5% auto;
+    padding: 20px;
+    background-image: url(../image/background.svg); /* Đường dẫn tới hình ảnh */
+    background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ modal */
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    color: #ff944d;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    max-height: 80vh; /* Đảm bảo modal không vượt quá 80% chiều cao màn hình */
+    overflow-y: auto; /* Cho phép cuộn trong modal */
+}
+
+#guideModal .guide-step {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+#guideModal .guide-step img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+#guideModal .close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#guideModal .close:hover,
+#guideModal .close:focus {
+    color: #ff944d;
+    text-decoration: none;
+}
+
+#guideModal .modal-content {
+    overflow-y: scroll; /* Cho phép cuộn nội dung theo chiều dọc */
+    -ms-overflow-style: none;  /* Loại bỏ thanh cuộn trong IE và Edge */
+    scrollbar-width: none;  /* Loại bỏ thanh cuộn trong Firefox */
+}
+
+#guideModal .modal-content::-webkit-scrollbar {
+    display: none;  /* Loại bỏ thanh cuộn trong Chrome, Safari và Opera */
+}
+
+
+
