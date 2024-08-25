@@ -4,17 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - NobleRoot</title>
-    <link rel="stylesheet" href="css/style.css"> <!-- Liên kết tới file CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
 </head>
 <body>
-
     <section id="signup-section">
         <div class="signup-container">
             <div class="signup-header">
                 <a href="index.html" class="back-arrow">
-                    <i class="fas fa-arrow-left"></i> <!-- Mũi tên trở về -->
+                    <i class="fas fa-arrow-left"></i>
                 </a>
                 <h2>Sign Up</h2>
             </div>
@@ -35,22 +33,19 @@
             </form>
         </div>
     </section>
-
     <script>
         function validatePassword() {
             const password = document.getElementById('password').value;
             const confirmPassword = document.getElementById('confirm-password').value;
 
-            // Kiểm tra độ mạnh của mật khẩu
             const passwordRegex = /^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/;
             if (!passwordRegex.test(password)) {
-                alert('Password phải có ít nhất 8 ký tự, bao gồm ít nhất một chữ cái in hoa và một số.');
+                alert('Mật khẩu phải có ít nhất 8 ký tự, bao gồm ít nhất một chữ cái in hoa và một số.');
                 return false;
             }
 
-            // Kiểm tra mật khẩu xác nhận
             if (password !== confirmPassword) {
-                alert('Password và Confirm Password không khớp.');
+                alert('Mật khẩu và xác nhận mật khẩu không khớp.');
                 return false;
             }
 
